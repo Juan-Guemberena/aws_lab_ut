@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-usage="Usage: awsas  [--debug] [--profie aprofile] role-name <aws subcommand and options>. \nA dynamic version of --profile. Whereas --profile requires setting up configuration, awsas allows you to assume roles without setup. \nEg. awsas myrole sts get-caller-identity should return identity for myrole\n"
+usage="Usage: awsas  [--debug] [--profile aprofile] role-name <aws subcommand and options>. \nA dynamic version of --profile. Whereas --profile requires setting up configuration, awsas allows you to assume roles without setup. \nEg. awsas myrole sts get-caller-identity should return identity for myrole\n"
 
 
 function unset_aws() {

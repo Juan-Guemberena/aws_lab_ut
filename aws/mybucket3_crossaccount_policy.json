@@ -1,0 +1,23 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket"
+            ],
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "${ROOT_ARN}",
+                    "${ROLE_B_ARN}"
+                ]
+            },
+            "Resource": [
+                "arn:aws:s3:::${BUCKET_THREE}/*",
+                "arn:aws:s3:::${BUCKET_THREE}"
+            ],
+            "Sid": "BucketPolicyForS3MyBucket2"
+        }
+    ],
+    "Version": "2012-10-17"
+}

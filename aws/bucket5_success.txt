@@ -1,0 +1,3 @@
+Congratulations! You've correctly accessed bucket 5!
+
+Your CTF hash is the result of multiplying your username number by ${RANDOM}.

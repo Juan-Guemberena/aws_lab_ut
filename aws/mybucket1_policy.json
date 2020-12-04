@@ -1,0 +1,23 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket"
+            ],
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "${ROOT_ARN}",
+                    "${ROLE_B_ARN}"
+                ]
+            },
+            "Resource": [
+                "arn:aws:s3:::${BUCKET_ONE}/*",
+                "arn:aws:s3:::${BUCKET_ONE}"
+            ],
+            "Sid": "AssumeRolePolicyForS3ReaderRoleA"
+        }
+    ],
+    "Version": "2012-10-17"
+}

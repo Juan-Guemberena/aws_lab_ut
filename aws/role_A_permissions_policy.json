@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::${BUCKET_TWO}/*",
+                "arn:aws:s3:::${BUCKET_TWO}",
+                "arn:aws:s3:::${BUCKET_THREE}/*",
+                "arn:aws:s3:::${BUCKET_THREE}",
+                "arn:aws:s3:::${BUCKET_FOUR}*",
+                "arn:aws:s3:::${BUCKET_FOUR}"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": [
+                "arn:aws:s3:::${BUCKET_FIVE}",
+                "arn:aws:s3:::${BUCKET_FIVE}/*"
+            ]
+        }
+    ]
+}
