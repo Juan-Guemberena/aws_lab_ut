@@ -48,7 +48,7 @@ function awsas () {
       if [[ $debug == "DEBUG" ]]; then
         echo "assuming role arn $role_arn"
       fi
-      creds=`aws --profile $profile sts assume-role --role-arn $role_arn --role-session-name $role`
+      creds=`aws --profile $profile sts assume-role --role-arn $role_arn --external-id lab2_user --role-session-name $role`
       if [[ $debug == "DEBUG" ]]; then
           echo "`echo ${creds} | jq '.AssumedRoleUser.Arn'`"
       fi
